@@ -1,8 +1,13 @@
 import cv2
 import numpy as np
 
-img = cv2.imread("circles.jpg")
+img = cv2.imread('images/20180630_154039.jpg') # "circles.jpg"
+cv2.imshow("img", img)
+cv2.waitKey(0)
+
 img_hsv=cv2.cvtColor(img.copy(), cv2.COLOR_BGR2HSV)
+cv2.imshow("img_hsv", img_hsv)
+cv2.waitKey(0)
 
 # lower mask (0-10)
 lower_red = np.array([0,50,50])
